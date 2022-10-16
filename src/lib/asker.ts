@@ -103,12 +103,12 @@ export function calculate(): number {
   res += $values[9] * $values[10];
 
   // Swimming pool
-  if ($values[10]) {
-    res += (18000 + $values[11])/365;
+  if ($values[11]) {
+    res += (18000 + $values[12])/365;
   }
 
   // Car
-  res += $values[12] * $values[13];
+  res += $values[13] * $values[14];
 
   return Math.round(res);
 }

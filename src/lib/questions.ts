@@ -175,8 +175,8 @@ export const questions: Question<any>[] = [
     type: QuestionType.MultipleChoice,
     data: {
       choices: {
-        "Yes": true,
         "No": false,
+        "Yes": true,
       },
     },
   },
