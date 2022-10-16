@@ -2,6 +2,7 @@ export interface Question<T> {
   title: string,
   type: QuestionType,
   data: MultipleChoiceQuestion<T> | NumberQuestion,
+  condition?: Condition,
 }
 
 export enum QuestionType {
@@ -17,6 +18,11 @@ export interface NumberQuestion {
   min: number,
   max?: number,
   default: number,
+}
+
+export interface Condition{
+  offset: number,
+  check: (v: any) => boolean,
 }
 
 // Questions
@@ -81,7 +87,11 @@ export const questions: Question<any>[] = [
         "11-30 minutes": 20,
         "30+ minutes": 30,
       }
-    }
+    },
+    condition: {
+      offset: -1,
+      check: (v: number) => v != 0,
+    },
   },
   {
     title: "How long do members of your household leave the kitchen sink running (not including washing dishes)?",
@@ -115,6 +125,10 @@ export const questions: Question<any>[] = [
         "By hand": true,
         "Dishwasher": false,
       },
+    },
+    condition: {
+      offset: -1,
+      check: (v: number) => v != 0,
     },
   },
   {
@@ -155,6 +169,10 @@ export const questions: Question<any>[] = [
         "40,000+ square feet": 14375,
       },
     },
+    condition: {
+      offset: -1,
+      check: (v: number) => v != 0,
+    },
   },
   {
     title: "Do you have a swimming pool?",
@@ -185,6 +203,10 @@ export const questions: Question<any>[] = [
         "12": 12000,
       },
     },
+    condition: {
+      offset: -1,
+      check: (v: boolean) => v,
+    },
   },
   {
     title: "How often do you wash your car?",
@@ -207,6 +229,10 @@ export const questions: Question<any>[] = [
         "At home": 100,
         "Car wash": 58,
       },
+    },
+    condition: {
+      offset: -1,
+      check: (v: number) => v != 0,
     },
   }
 ];

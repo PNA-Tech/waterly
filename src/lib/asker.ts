@@ -110,5 +110,5 @@ export function calculate(): number {
   // Car
   res += $values[12] * $values[13];
 
-  return res;
+  return Math.round(res);
 }
