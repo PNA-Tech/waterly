@@ -40,7 +40,7 @@ export const questions: Question<any>[] = [
       choices: {
         "Pre-1980": HouseholdType.Old,
         "Standard": HouseholdType.Standard,
-        "Efficient (WaterSense appliances, low-flow showerheads, etc.)": HouseholdType.Efficient,
+        "Efficient (Energy Star appliances, low-flow showerheads, etc.)": HouseholdType.Efficient,
       }
     },
   },
@@ -57,10 +57,10 @@ export const questions: Question<any>[] = [
     type: QuestionType.MultipleChoice,
     data: {
       choices: {
-        "<5 minutes": 4,
+        "Under 5 minutes": 4,
         "5-10 minutes": 8,
         "11-15 minutes": 13,
-        "15+ minutes": 15,
+        "Over 15 minutes": 15,
       }
     },
   },
@@ -82,10 +82,10 @@ export const questions: Question<any>[] = [
     type: QuestionType.MultipleChoice,
     data: {
       choices: {
-        "<4 minutes": 4,
+        "Under 4 minutes": 4,
         "4-10 minutes": 8,
         "11-30 minutes": 20,
-        "30+ minutes": 30,
+        "Over 30 minutes": 30,
       }
     },
   },
@@ -94,9 +94,9 @@ export const questions: Question<any>[] = [
     type: QuestionType.MultipleChoice,
     data: {
       choices: {
-        "Of course!": 0, // TODO: Change values after research
-        "Gross, no!": 10, // FIXME: Every time you skip a flush, you save between 1.5 and 5 gallons!
-        "Sometimes": 5,
+        "Of course!": 1 / 4,
+        "Gross, no!": 1,
+        "Sometimes": 1 / 2,
       }
     },
   },
@@ -131,6 +131,7 @@ export const questions: Question<any>[] = [
       choices: {
         "By hand": true,
         "Dishwasher": false,
+        // TODO "Laundromat": false,
       },
     },
     condition: {
@@ -173,7 +174,7 @@ export const questions: Question<any>[] = [
         "1,000-5,000 square feet": 990,
         "5,000-10,000 square feet": 2470,
         "10,000-40,000 square feet": 8250,
-        "40,000+ square feet": 14375,
+        "Over 40,000 square feet": 14375,
       },
     },
     condition: {
