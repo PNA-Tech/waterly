@@ -78,7 +78,7 @@ export const questions: Question<any>[] = [
     }
   },
   {
-    title: "How long do people in your household leave the bathroom sink running?",
+    title: "How long do people in your household leave the bathroom faucets running?",
     type: QuestionType.MultipleChoice,
     data: {
       choices: {
@@ -86,6 +86,17 @@ export const questions: Question<any>[] = [
         "4-10 minutes": 8,
         "11-30 minutes": 20,
         "30+ minutes": 30,
+      }
+    },
+  },
+  {
+    title: "Do you let it 'mellow' in the toilet?",
+    type: QuestionType.MultipleChoice,
+    data: {
+      choices: {
+        "Of course!": 0, // TODO: Change values after research
+        "Gross, no!": 10, // FIXME: Every time you skip a flush, you save between 1.5 and 5 gallons!
+        "Sometimes": 5,
       }
     },
   },
