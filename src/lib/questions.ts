@@ -88,10 +88,6 @@ export const questions: Question<any>[] = [
         "30+ minutes": 30,
       }
     },
-    condition: {
-      offset: -1,
-      check: (v: number) => v != 0,
-    },
   },
   {
     title: "How long do members of your household leave the kitchen sink running (not including washing dishes)?",
