@@ -20,7 +20,7 @@ export interface NumberQuestion {
   default: number,
 }
 
-export interface Condition{
+export interface Condition {
   offset: number,
   check: (v: any) => boolean,
 }
@@ -70,9 +70,9 @@ export const questions: Question<any>[] = [
     data: {
       choices: {
         "Never": 0,
-        "Once a year": 1/365,
-        "Once a month": 1/30,
-        "Once a week": 1/7,
+        "Once a year": 1 / 365,
+        "Once a month": 1 / 30,
+        "Once a week": 1 / 7,
         "Once a day": 1,
       }
     }
@@ -107,7 +107,7 @@ export const questions: Question<any>[] = [
     data: {
       choices: {
         "Disposable dishes": 0,
-        "Once a week": 1/7,
+        "Once a week": 1 / 7,
         "Once a day": 1,
         "Twice a day": 2,
       }
@@ -133,8 +133,8 @@ export const questions: Question<any>[] = [
     data: {
       choices: {
         "Never": 0,
-        "Once a month": 1/30,
-        "Once a week": 1/7,
+        "Once a month": 1 / 30,
+        "Once a week": 1 / 7,
         "Once a day": 1,
       }
     }
@@ -145,8 +145,8 @@ export const questions: Question<any>[] = [
     data: {
       choices: {
         "Never": 0,
-        "Once a month": 1/30,
-        "Once a week": 1/7,
+        "Once a month": 1 / 30,
+        "Once a week": 1 / 7,
         "Once a day": 1,
       },
     },
@@ -210,9 +210,9 @@ export const questions: Question<any>[] = [
     data: {
       choices: {
         "I don't have a car": 0,
-        "Once a year": 1/365,
-        "Once a month": 1/30,
-        "Once a week": 1/7,
+        "Once a year": 1 / 365,
+        "Once a month": 1 / 30,
+        "Once a week": 1 / 7,
         "Once a day": 1,
       },
     },

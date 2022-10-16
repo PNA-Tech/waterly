@@ -4,18 +4,18 @@ import { HouseholdType, questions, QuestionType, type MultipleChoiceQuestion, ty
 let $values: any[] = [];
 for (let q of questions) {
   switch (q.type) {
-  case QuestionType.MultipleChoice:
-    $values.push(Object.values((q.data as MultipleChoiceQuestion<any>).choices)[0]);
-    break;
-  
-  case QuestionType.Number:
-    $values.push((q.data as NumberQuestion).default);
-    break;
+    case QuestionType.MultipleChoice:
+      $values.push(Object.values((q.data as MultipleChoiceQuestion<any>).choices)[0]);
+      break;
+
+    case QuestionType.Number:
+      $values.push((q.data as NumberQuestion).default);
+      break;
   }
 }
 
 export let values = writable($values);
-values.subscribe(v => {$values = v});
+values.subscribe(v => { $values = v });
 
 export function calculate(): number {
   let res = 0;
@@ -23,17 +23,17 @@ export function calculate(): number {
   // Shower
   let mult = 0;
   switch ($values[0]) {
-  case HouseholdType.Old:
-    mult = 5;
-    break;
+    case HouseholdType.Old:
+      mult = 5;
+      break;
 
-  case HouseholdType.Standard:
-    mult = 3.8;
-    break;
+    case HouseholdType.Standard:
+      mult = 3.8;
+      break;
 
-  case HouseholdType.Efficient:
-    mult = 2.5;
-    break;
+    case HouseholdType.Efficient:
+      mult = 2.5;
+      break;
   }
   res += mult * $values[2] * $values[1];
 
@@ -42,33 +42,33 @@ export function calculate(): number {
 
   // Sinks
   switch ($values[0]) {
-  case HouseholdType.Old:
-    mult = 5;
-    break;
+    case HouseholdType.Old:
+      mult = 5;
+      break;
 
-  case HouseholdType.Standard:
-    mult = 3.3
-    break;
+    case HouseholdType.Standard:
+      mult = 3.3
+      break;
 
-  case HouseholdType.Efficient:
-    mult = 1.5;
-    break;
+    case HouseholdType.Efficient:
+      mult = 1.5;
+      break;
   }
   res += $values[4] * mult * $values[1];
 
   // Toilets
   switch ($values[0]) {
-  case HouseholdType.Old:
-    mult = 5;
-    break;
+    case HouseholdType.Old:
+      mult = 5;
+      break;
 
-  case HouseholdType.Standard:
-    mult = 3.3
-    break;
+    case HouseholdType.Standard:
+      mult = 3.3
+      break;
 
-  case HouseholdType.Efficient:
-    mult = 1.6;
-    break;
+    case HouseholdType.Efficient:
+      mult = 1.6;
+      break;
   }
   res += 5 * mult * $values[1]; // Average person flushes 5x a day
 
@@ -104,7 +104,7 @@ export function calculate(): number {
 
   // Swimming pool
   if ($values[11]) {
-    res += (18000 + $values[12])/365;
+    res += (18000 + $values[12]) / 365;
   }
 
   // Car
