@@ -108,17 +108,6 @@ export const questions: Question<any>[] = [
     }
   },
   {
-    title: "How often does your household do laundry?",
-    type: QuestionType.MultipleChoice,
-    data: {
-      choices: {
-        "Once a month": 1/30,
-        "Once a week": 1/7,
-        "Once a day": 1,
-      }
-    }
-  },
-  {
     title: "How are dishes washed?",
     type: QuestionType.MultipleChoice,
     data: {
@@ -127,6 +116,18 @@ export const questions: Question<any>[] = [
         "Dishwasher": false,
       },
     },
+  },
+  {
+    title: "How often does your household do laundry?",
+    type: QuestionType.MultipleChoice,
+    data: {
+      choices: {
+        "Never": 0,
+        "Once a month": 1/30,
+        "Once a week": 1/7,
+        "Once a day": 1,
+      }
+    }
   },
   {
     title: "How often do you water your lawn?",
