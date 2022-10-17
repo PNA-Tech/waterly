@@ -20,9 +20,14 @@ export interface NumberQuestion {
   default: number,
 }
 
-export interface Condition{
+export interface Condition {
   offset: number,
   check: (v: any) => boolean,
+}
+
+export interface Tip {
+  title: string,
+  save: number,
 }
 
 // Questions

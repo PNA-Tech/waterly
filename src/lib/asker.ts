@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import { HouseholdType, questions, QuestionType, type MultipleChoiceQuestion, type NumberQuestion } from "./questions";
+import { HouseholdType, questions, QuestionType, type MultipleChoiceQuestion, type NumberQuestion, type Tip } from "./questions";
 
 let $values: any[] = [];
 for (let q of questions) {
@@ -17,7 +17,9 @@ for (let q of questions) {
 export let values = writable($values);
 values.subscribe(v => {$values = v});
 
-export function calculate(): number {
+export let tips: Tip[];
+
+function bathrooms(): number {
   let res = 0;
 
   // Shower
@@ -36,6 +38,12 @@ export function calculate(): number {
     break;
   }
   res += mult * $values[2] * $values[1];
+  if ($values[0] != HouseholdType.Efficient) {
+    tips.push({
+      title: "Low-flow Showerhead",
+      save: (mult - 2.5) * $values[2] * $values[1]
+    })
+  }
 
   // Baths
   res += 35 * $values[3] * $values[1]; // Average bath takes 35 gallons
@@ -55,6 +63,12 @@ export function calculate(): number {
     break;
   }
   res += $values[4] * mult * $values[1];
+  if ($values[0] != HouseholdType.Efficient) {
+    tips.push({
+      title: "Low-flow Bathroom Faucet",
+      save: $values[4] * (mult - 1.5) * $values[1]
+    })
+  }
 
   // Toilets
   switch ($values[0]) {
@@ -71,14 +85,33 @@ export function calculate(): number {
     break;
   }
   res += 5 * mult * $values[1]; // Average person flushes 5x a day
+  if ($values[0] != HouseholdType.Efficient) {
+    tips.push({
+      title: "WaterSense Toilet",
+      save: 5 * (mult - 1.6) * $values[1]
+    })
+  }
+
+  return res;
+}
+
+function household(): number {
+  let res = 0;
 
   // Kitchen sink
+  let mult = 0;
   if ($values[0] === HouseholdType.Efficient) {
     mult = 1.5;
   } else {
     mult = 5;
   }
   res += $values[5] * mult * $values[1];
+  if ($values[0] != HouseholdType.Efficient) {
+    tips.push({
+      title: "Low-flow Kitchen Faucet",
+      save: $values[5] * (mult - 1.5) * $values[1]
+    })
+  }
 
   // Dishes
   if ($values[0] === HouseholdType.Efficient) {
@@ -90,6 +123,12 @@ export function calculate(): number {
     mult = 27;
   }
   res += $values[6] * mult;
+  if ($values[0] != HouseholdType.Efficient) {
+    tips.push({
+      title: "Use EnergyStar Dishwasher",
+      save: $values[6] * (mult - 4.3)
+    })
+  }
 
   // Laundry
   if ($values[0] === HouseholdType.Efficient) {
@@ -98,6 +137,18 @@ export function calculate(): number {
     mult = 41;
   }
   res += $values[8] * mult;
+  if ($values[0] != HouseholdType.Efficient) {
+    tips.push({
+      title: "WaterSense Washing Machine",
+      save: $values[8] * (mult - 20)
+    })
+  }
+
+  return res;
+}
+
+function outdoor(): number {
+  let res = 0;
 
   // Lawn
   res += $values[9] * $values[10];
@@ -109,6 +160,17 @@ export function calculate(): number {
 
   // Car
   res += $values[13] * $values[14];
+
+  return res;
+}
+
+export function calculate(): number {
+  tips = [];
+  let res = 0;
+
+  res += bathrooms();
+  res += household();
+  res += outdoor();
 
   return Math.round(res);
 }
