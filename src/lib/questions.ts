@@ -27,6 +27,7 @@ export interface Condition {
 
 export interface Tip {
   title: string,
+  description: string,
   save: number,
 }
 

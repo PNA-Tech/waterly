@@ -41,6 +41,7 @@ function bathrooms(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Showerhead",
+      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
       save: (mult - 2.5) * $values[2] * $values[1]
     })
   }
@@ -66,6 +67,7 @@ function bathrooms(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Bathroom Faucet",
+      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
       save: $values[4] * (mult - 1.5) * $values[1]
     })
   }
@@ -88,6 +90,7 @@ function bathrooms(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Toilet",
+      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
       save: 5 * (mult - 1.6) * $values[1]
     })
   }
@@ -109,6 +112,7 @@ function household(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Kitchen Faucet",
+      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
       save: $values[5] * (mult - 1.5) * $values[1]
     })
   }
@@ -126,6 +130,7 @@ function household(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Use EnergyStar Dishwasher",
+      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
       save: $values[6] * (mult - 4.3)
     })
   }
@@ -140,6 +145,7 @@ function household(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Washing Machine",
+      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
       save: $values[8] * (mult - 20)
     })
   }
