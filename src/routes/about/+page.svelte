@@ -3,4 +3,4 @@
 </svelte:head>
 
 <h1>About Us</h1>
-<p class="lead">We enjoy cheese</p>
+<p class="lead">We enjoy water</p>
