@@ -127,7 +127,7 @@ function household(): number {
     mult = 27;
   }
   res += $values[6] * mult;
-  if ($values[0] != HouseholdType.Efficient) {
+  if ($values[6] > 0 && $values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Use EnergyStar Dishwasher",
       description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
@@ -142,7 +142,7 @@ function household(): number {
     mult = 41;
   }
   res += $values[8] * mult;
-  if ($values[0] != HouseholdType.Efficient) {
+  if ($values[8] > 0 && $values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Washing Machine",
       description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
