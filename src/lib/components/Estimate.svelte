@@ -23,13 +23,13 @@
 
 <style>
   .estimate {
-    position: fixed;
-    bottom: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding-right: 0.5vw;
-    padding-bottom: 0.5vh;
+    padding-top: 0.5vh;
+    font-weight: bold;
+    text-align: right;
+    width: 100vw;
   }
 </style>

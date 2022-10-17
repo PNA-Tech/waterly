@@ -1,7 +1,6 @@
 <script lang="ts">
   import { values } from "$lib/asker";
   import { questions, QuestionType, type Question, type MultipleChoiceQuestion, type NumberQuestion } from "$lib/questions";
-    import { fly } from "svelte/transition";
 
 
   export let id: number;
@@ -43,12 +42,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>

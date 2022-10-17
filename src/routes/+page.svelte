@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { values } from "$lib/asker";
+    import { goto } from "$app/navigation";
+  import { values } from "$lib/asker";
   import Estimate from "$lib/components/Estimate.svelte";
   import Question from "$lib/components/Question.svelte";
-    import Results from "$lib/components/Results.svelte";
   import { questions } from "$lib/questions";
   import { tick } from "svelte";
   import { fly } from "svelte/transition";
@@ -22,6 +22,12 @@
       }
     }
 
+    // Check if within bounds
+    if (question + offset >= questions.length) {
+      goto("/results");
+      return;
+    }
+
     prev = question;
     animate = true;
     tick().then(() => {animate = false;});
@@ -29,43 +35,38 @@
   } 
 </script>
 
-{#if animate}
-  <div out:fly={{x: ((question - prev) > 0 ? -1 : 1) * window.innerWidth, duration }}>
-    {#if prev < questions.length}
-      <Question id={prev}></Question>
-    {:else}
-      <Results></Results>
-    {/if}
-  </div>
-{/if}
-
-{#if !animate}
-<div in:fly={{x: ((question - prev) > 0 ? 1 : -1) * window.innerWidth, duration }}>
-  {#if question < questions.length}
-    <Question id={question}></Question>
-  {:else}
-    <Results></Results>
-  {/if}
-</div>
-{/if}
-
 <Estimate></Estimate>
 
-<div class="switcher input-group">
+<div class="body">
+  {#if animate}
+    <div out:fly={{x: ((question - prev) > 0 ? -1 : 1) * window.innerWidth, duration }}>
+      <Question id={prev}></Question>
+    </div>
+  {/if}
+
+  {#if !animate}
+    <div in:fly={{x: ((question - prev) > 0 ? 1 : -1) * window.innerWidth, duration }}>
+      <Question id={question}></Question>
+    </div>
+  {/if}
+</div>
+
+<div class="switcher input-group input-group-lg">
   <button class="btn btn-outline-primary left-btn" on:click={() => {changeQuestion(-1)}} disabled={question == 0}><i class="bi bi-arrow-left"></i></button>
-  <input readonly value={question < questions.length ? "Question " + (question + 1) + " of " + questions.length : "Finished"} class="form-control input"/>
-  <button class="btn btn-outline-primary right-btn" on:click={() => {changeQuestion(1)}} disabled={question >= questions.length}><i class="bi bi-arrow-right"></i></button>
+  <input readonly value={"Question " + (question + 1) + " of " + questions.length} class="form-control input"/>
+  <button class="btn btn-outline-primary right-btn" on:click={() => {changeQuestion(1)}}><i class="bi bi-arrow-right"></i></button>
 </div>
 
 <style>
   .switcher {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 25vw;
+    right: 25vw;
   }
 
   .left-btn {
-    border-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .right-btn {
@@ -74,5 +75,14 @@
 
   .input {
     flex: 0.5 1 auto;
+  }
+  
+  .body > * {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: scroll;
   }
 </style>
