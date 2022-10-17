@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
+  import { goto } from "$app/navigation";
   import { values } from "$lib/asker";
   import Estimate from "$lib/components/Estimate.svelte";
   import Question from "$lib/components/Question.svelte";
@@ -34,6 +34,10 @@
     question += offset;
   } 
 </script>
+
+<svelte:head>
+  <title>Water Calculator</title>
+</svelte:head>
 
 <Estimate></Estimate>
 
