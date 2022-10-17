@@ -94,7 +94,7 @@
         <img src="/w3images/team1.jpg" alt="Test" style="width:100%" />
         <div class="container">
           <h2>Aarnav Bhat</h2>
-          <p class="title">CEO & Founder</p>
+          <p class="title">Researcher</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
           <p>jane@example.com</p>
           <p><button class="button">Contact</button></p>
@@ -104,13 +104,13 @@
 
     <div class="column">
       <div class="card">
-        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%" />
+        <img src="src\about\Profile Picture.png" alt="Mike" style="width:100%" />
         <div class="container">
           <h2>Piyush Acharya</h2>
-          <p class="title">Art Director</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>mike@example.com</p>
-          <p><button class="button">Contact</button></p>
+          <p class="title">Researcher + Website Developer</p>
+          <p>Piyush Acharya is an freshman at Interlake High School interested in SWE and ML. He recently placed first at the U.S. Department of Energy's National Science Bowl Finals. Piyush is highly passionate about exploring different ways in which he can advance his skills in the branches of science while also tying it with his passion for computer science. He created and is the lead developer at DNAnalyzer, an open source project for analyzing DNA sequences where he manages a team of over 20 developers.</p>
+          <p>contact@piyushacharya.com</p>
+          <p><button href="www.piyushacharya.com" class="button">Contact</button></p>
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@
         <img src="/w3images/team3.jpg" alt="John" style="width:100%" />
         <div class="container">
           <h2>Nishant Vikramaditya</h2>
-          <p class="title">Designer</p>
+          <p class="title">Website Developer</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
           <p>john@example.com</p>
           <p><button class="button">Contact</button></p>
