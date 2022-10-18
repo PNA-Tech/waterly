@@ -41,7 +41,7 @@ function bathrooms(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Showerhead",
-      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
+      description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
       save: (mult - 2.5) * $values[2] * $values[1]
     })
   }
@@ -67,7 +67,7 @@ function bathrooms(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Bathroom Faucet",
-      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
+      description: "Use a faucet with low-flow. This allows you to save money and help the Earth!",
       save: $values[4] * (mult - 1.5) * $values[1]
     })
   }
@@ -90,7 +90,7 @@ function bathrooms(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Toilet",
-      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
+      description: "Save the environment as well as your bank account with a WaterSense Toilet!",
       save: 5 * (mult - 1.6) * $values[1]
     })
   }
@@ -112,7 +112,7 @@ function household(): number {
   if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Kitchen Faucet",
-      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
+      description: "Use a kitchen faucet with low-flow. This allows you to save money and help the Earth!",
       save: $values[5] * (mult - 1.5) * $values[1]
     })
   }
@@ -130,7 +130,7 @@ function household(): number {
   if ($values[6] > 0 && $values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Use EnergyStar Dishwasher",
-      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
+      description: "Use an EnergyStar Dishwasher to clean your dishes while helping the environment and build up your wallet!",
       save: $values[6] * (mult - 4.3)
     })
   }
@@ -145,7 +145,7 @@ function household(): number {
   if ($values[8] > 0 && $values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Washing Machine",
-      description: "Write a few sentences here. I don't really like writing, but I do enjoy saving water!",
+      description: "Use an WaterSense Washing Machine to clean your clothes while helping the environment and wash along those savings!",
       save: $values[8] * (mult - 20)
     })
   }
