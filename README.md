@@ -4,17 +4,7 @@ Install dependencies with:
 ```
 npm install
 ``` 
-or 
-
-```
-pnpm install
-```
-
-or
-
-```
-yarn
-```
+or ```pnpm install``` or ```yarn```
 
 Start a development server:
 
