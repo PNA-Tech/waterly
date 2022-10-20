@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 0.5vw;
+    padding-right: 2vw;
     padding-top: 0.5vh;
     font-weight: bold;
     text-align: right;
