@@ -15,7 +15,7 @@
       <div class="card-body">
         <h5 class="card-title">Aarnav Bhat</h5>
         <p class="card-text">Researcher</p>
-        <p class="card-text">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="card-text">Aarnav Bhat is a freshman at Interlake High School. He is passionate about Computer Science and Business and helps his local community by refereeing games and tutoring kids via Schoohouse.world.  </p>
         <a href="https://www.piyushacharya.com" class="btn btn-primary">Contact</a>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <div class="card-body">
         <h5 class="card-title">Piyush Acharya</h5>
         <p class="card-text">Researcher</p>
-        <p class="card-text">Piyush Acharya is an freshman at Interlake High School interested in SWE and ML. He recently placed first at the U.S. Department of Energy's National Science Bowl Finals. Piyush is highly passionate about exploring different ways in which he can advance his skills in the branches of science while also tying it with his passion for computer science. He created and is the lead developer at DNAnalyzer, an open source project for analyzing DNA sequences where he manages a team of over 20 developers.</p>
+        <p class="card-text">Piyush Acharya is a freshman at Interlake High School interested in SWE and ML. He recently placed first at the U.S. Department of Energy's National Science Bowl Finals. Piyush is highly passionate about exploring different ways in which he can advance his skills in the branches of science while also tying it with his passion for computer science. He created and is the lead developer at DNAnalyzer, an open source project for analyzing DNA sequences where he manages a team of over 20 developers.</p>
         <a href="https://www.piyushacharya.com" class="btn btn-primary">Contact</a>
       </div>
     </div>
