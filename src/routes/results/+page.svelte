@@ -20,7 +20,7 @@
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Bill</h5>
+      <h5 class="card-title">Bill*</h5>
       <h1>$100</h1>
       <p class="card-text"><small class="text-muted">per month</small></p>
     </div>
@@ -40,11 +40,14 @@
         <div class="row">
           <div class="col">
             <i class="bi bi-droplet-half"></i>
-            {(tip.save * 365).toLocaleString()}
+            {(tip.save * 365).toLocaleString()} 
           </div>
           <div class="col">
             <i class="bi bi-cash-coin"></i>
             ${(tip.money_saved).toLocaleString()}
+          </div>
+          <div class="col">
+            Our recommended product
           </div>
         </div>
       </div>
@@ -52,3 +55,9 @@
   </div>
   {/each}
 </div>
+<br>
+<br>
+<div>
+    *Bill Based on Average Household
+</div>
+
