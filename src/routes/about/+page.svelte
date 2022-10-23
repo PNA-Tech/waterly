@@ -39,7 +39,7 @@
       <div class="card-body">
         <h5 class="card-title">Nishant Vikramaditya</h5>
         <p class="card-text">Lead Developer</p>
-        <p class="card-text">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="card-text">Nishant Vikramaditya is a passionate programmer and developer. He is currently a freshman at Interlake High School. On his website nv7haven.com, he has a vareity of games and projects showcasing his intrest in programming.</p>
         <a href="https://nv7haven.com" class="btn btn-primary">Contact</a>
       </div>
     </div>
