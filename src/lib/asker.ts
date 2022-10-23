@@ -53,7 +53,7 @@ function bathrooms(): number {
         title: "Low-flow Showerhead",
         description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
         save: (mult - 2.5) * $values[2] * $values[1],
-        money_saved:($values[1]) * (0.8125 * 0.15 * $values[$values[2]]*365)
+        money_saved:($values[1]) * (0.8125 * 0.15 * $values[2]*365)
       })
     }
 
@@ -127,7 +127,7 @@ function household(): number {
       title: "Low-flow Kitchen Faucet",
       description: "Use a kitchen faucet with low-flow. This allows you to save money and help the Earth!",
       save: $values[5] * (mult - 1.5) * $values[1],
-      money_saved: 100
+      money_saved: 90
     })
   }
 

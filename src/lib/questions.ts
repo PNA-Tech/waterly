@@ -67,7 +67,7 @@ export const questions: Question<any>[] = [
         "<5 minutes": 4,
         "5-10 minutes": 8,
         "11-15 minutes": 13,
-        "15+ minutes": 15,
+        "15+ minutes": 16,
       }
     },
   },
