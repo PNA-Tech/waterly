@@ -42,8 +42,7 @@ function bathrooms(): number {
     tips.push({
       title: "Low-flow Showerhead",
       description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
-      save: (mult - 2.5) * $values[2] * $values[1],
-      money_saved:($values[1]) * (($values[0] == HouseholdType.Standard ? 0.4 : 0.8125) * 0.15 * $values[$values[2]]*365)
+      save: (mult - 2.5) * $values[2] * $values[1]
     })
   }
 
@@ -69,8 +68,7 @@ function bathrooms(): number {
     tips.push({
       title: "Low-flow Bathroom Faucet",
       description: "Use a faucet with low-flow. This allows you to save money and help the Earth!",
-      save: $values[4] * (mult - 1.5) * $values[1],
-      money_saved: 90
+      save: $values[4] * (mult - 1.5) * $values[1]
     })
   }
 
@@ -89,20 +87,11 @@ function bathrooms(): number {
     break;
   }
   res += 5 * mult * $values[1]; // Average person flushes 5x a day
-  if ($values[0] == HouseholdType.Standard) {
+  if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Toilet",
       description: "Save the environment as well as your bank account with a WaterSense Toilet!",
-      save: 5 * (mult - 1.6) * $values[1],
-      money_saved: (0.2*0.065* $values[1]*365)
-    })
-  }
-  if ($values[0] == HouseholdType.Old) {
-    tips.push({
-      title: "WaterSense Toilet",
-      description: "Save the environment as well as your bank account with a WaterSense Toilet!",
-      save: 5 * (mult - 1.6) * $values[1],
-      money_saved: (0.7867*0.065* $values[1]*365)
+      save: 5 * (mult - 1.6) * $values[1]
     })
   }
   return res;
@@ -123,8 +112,7 @@ function household(): number {
     tips.push({
       title: "Low-flow Kitchen Faucet",
       description: "Use a kitchen faucet with low-flow. This allows you to save money and help the Earth!",
-      save: $values[5] * (mult - 1.5) * $values[1],
-      money_saved: 90
+      save: $values[5] * (mult - 1.5) * $values[1]
     })
   }
 
@@ -142,8 +130,7 @@ function household(): number {
     tips.push({
       title: "Use EnergyStar Dishwasher",
       description: "Use an EnergyStar Dishwasher to clean your dishes while helping the environment and build up your wallet!",
-      save: $values[6] * (mult - 4.3),
-      money_saved: 100
+      save: $values[6] * (mult - 4.3)
     })
   }
 
@@ -158,8 +145,7 @@ function household(): number {
     tips.push({
       title: "WaterSense Washing Machine",
       description: "Use an WaterSense Washing Machine to clean your clothes while helping the environment and wash along those savings!",
-      save: $values[8] * (mult - 20),
-      money_saved: 100,
+      save: $values[8] * (mult - 20)
     })
   }
   return res;
@@ -191,4 +177,9 @@ export function calculate(): number {
   res += outdoor();
 
   return Math.round(res);
+}
+
+// TODO: Support per-state prices
+export function cost(gallons: number): number {
+  return 0.03 * gallons; // $0.03/gallon on average
 }

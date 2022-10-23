@@ -1,11 +1,16 @@
 <script lang="ts">
-  import { calculate, values } from "../asker";
+  import { calculate, cost, values } from "../asker";
 
   let estimate = 0;
   let display = 0;
   values.subscribe(() => {
     estimate = calculate() * 365;
   })
+  const currencyFormat = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  });
   setInterval(() => {
     if (display != estimate) {
       display += Math.round((estimate - display) / 10);
@@ -18,7 +23,7 @@
 
 <div class="estimate">
   <div>{display.toLocaleString()} gal/year</div>
-  <div>$idk/year</div>
+  <div>{currencyFormat.format(cost(display))}</div>
 </div>
 
 <style>

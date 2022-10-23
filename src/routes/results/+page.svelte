@@ -1,5 +1,11 @@
 <script lang="ts">
-  import { calculate, tips } from "$lib/asker";
+  import { calculate, cost, tips } from "$lib/asker";
+
+  const currencyFormat = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  });
 
   let res = calculate();
   tips.sort((a, b) => b.save - a.save);
@@ -44,10 +50,7 @@
           </div>
           <div class="col">
             <i class="bi bi-cash-coin"></i>
-            ${(tip.money_saved).toLocaleString()}
-          </div>
-          <div class="col">
-            Our recommended product
+            {currencyFormat.format(cost(tip.save * 365))}
           </div>
         </div>
       </div>
@@ -55,9 +58,3 @@
   </div>
   {/each}
 </div>
-<br>
-<br>
-<div>
-    *Bill Based on Average Household
-</div>
-
