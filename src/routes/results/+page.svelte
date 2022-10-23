@@ -44,7 +44,7 @@
           </div>
           <div class="col">
             <i class="bi bi-cash-coin"></i>
-            $100
+            ${(tip.money_saved).toLocaleString()}
           </div>
         </div>
       </div>

@@ -29,6 +29,7 @@ export interface Tip {
   title: string,
   description: string,
   save: number,
+  money_saved: number,
 }
 
 // Questions
