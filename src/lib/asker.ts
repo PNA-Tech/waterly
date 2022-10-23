@@ -80,7 +80,7 @@ function bathrooms(): number {
       title: "Low-flow Bathroom Faucet",
       description: "Use a faucet with low-flow. This allows you to save money and help the Earth!",
       save: $values[4] * (mult - 1.5) * $values[1],
-      money_saved: 100
+      money_saved: 90
     })
   }
 
@@ -99,15 +99,22 @@ function bathrooms(): number {
     break;
   }
   res += 5 * mult * $values[1]; // Average person flushes 5x a day
-  if ($values[0] != HouseholdType.Efficient) {
+  if ($values[0] == HouseholdType.Standard) {
     tips.push({
       title: "WaterSense Toilet",
       description: "Save the environment as well as your bank account with a WaterSense Toilet!",
       save: 5 * (mult - 1.6) * $values[1],
-      money_saved: 100
+      money_saved: (0.2*0.065* $values[1]*365)
     })
   }
-
+  if ($values[0] == HouseholdType.Old) {
+    tips.push({
+      title: "WaterSense Toilet",
+      description: "Save the environment as well as your bank account with a WaterSense Toilet!",
+      save: 5 * (mult - 1.6) * $values[1],
+      money_saved: (0.7867*0.065* $values[1]*365)
+    })
+  }
   return res;
 }
 
