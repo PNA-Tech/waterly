@@ -38,24 +38,14 @@ function bathrooms(): number {
     break;
   }
   res += mult * $values[2] * $values[1];
-    if ($values[0] == HouseholdType.Standard) {
+  if ($values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "Low-flow Showerhead",
       description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
       save: (mult - 2.5) * $values[2] * $values[1],
-      money_saved:($values[1]) * (0.4 * 0.15 * $values[$values[2]]*365)
-      // For a Stand
+      money_saved:($values[1]) * (($values[0] == HouseholdType.Standard ? 0.4 : 0.8125) * 0.15 * $values[$values[2]]*365)
     })
   }
-    if
-    ($values[0] == HouseholdType.Old) {
-      tips.push({
-        title: "Low-flow Showerhead",
-        description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
-        save: (mult - 2.5) * $values[2] * $values[1],
-        money_saved:($values[1]) * (0.8125 * 0.15 * $values[2]*365)
-      })
-    }
 
   // Baths
   res += 35 * $values[3] * $values[1]; // Average bath takes 35 gallons
@@ -164,14 +154,14 @@ function household(): number {
     mult = 41;
   }
   res += $values[8] * mult;
-  if ($values[8] > 0 && $values[0] != HouseholdType.Efficient) { 
+  if ($values[8] > 0 && $values[0] != HouseholdType.Efficient) {
     tips.push({
       title: "WaterSense Washing Machine",
       description: "Use an WaterSense Washing Machine to clean your clothes while helping the environment and wash along those savings!",
       save: $values[8] * (mult - 20),
       money_saved: 100,
     })
-    }
+  }
   return res;
 }
 
