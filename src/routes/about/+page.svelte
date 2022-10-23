@@ -11,7 +11,7 @@
 <div class="row">
   <div class="col">
     <div class="card">
-      <img src="/w3images/team1.jpg" alt="Aarnav" style="width:100%" class="card-img-top"/>
+      <!--<img src="/w3images/team1.jpg" alt="Aarnav" style="width:100%" class="card-img-top"/>-->
       <div class="card-body">
         <h5 class="card-title">Aarnav Bhat</h5>
         <p class="card-text">Researcher</p>
@@ -35,11 +35,11 @@
 
   <div class="col">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="Nishant" style="width:100%" class="card-img-top"/>
+      <!--<img src="/w3images/team3.jpg" alt="Nishant" style="width:100%" class="card-img-top"/>-->
       <div class="card-body">
         <h5 class="card-title">Nishant Vikramaditya</h5>
         <p class="card-text">Lead Developer</p>
-        <p class="card-text">Nishant Vikramaditya is a passionate programmer and developer. He is currently a freshman at Interlake High School. On his website nv7haven.com, he has a vareity of games and projects showcasing his intrest in programming.</p>
+        <p class="card-text">Nishant Vikramaditya is a passionate programmer and developer. He is currently a freshman at Interlake High School. On his <a href="https://nv7haven.com" target="_blank">website</a>, he has a variety of games and projects showcasing his interest in programming.</p>
         <a href="https://nv7haven.com" class="btn btn-primary">Contact</a>
       </div>
     </div>
