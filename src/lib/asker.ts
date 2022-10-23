@@ -44,10 +44,11 @@ function bathrooms(): number {
       description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
       save: (mult - 2.5) * $values[2] * $values[1],
       money_saved:($values[1]) * (0.4 * 0.15 * $values[$values[2]]*365)
+      // For a Stand
     })
   }
     else
-    ($values[0] == HouseholdType.Standard) ;{
+    ($values[0] == HouseholdType.Old) ;{
       tips.push({
         title: "Low-flow Showerhead",
         description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
