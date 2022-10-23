@@ -47,8 +47,8 @@ function bathrooms(): number {
       // For a Stand
     })
   }
-    else
-    ($values[0] == HouseholdType.Old) ;{
+    if
+    ($values[0] == HouseholdType.Old) {
       tips.push({
         title: "Low-flow Showerhead",
         description: "Try to use a showerhead which releases less water. This can help you save money and the planet as less water is used!",
