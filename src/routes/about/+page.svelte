@@ -39,7 +39,7 @@
       <div class="card-body">
         <h5 class="card-title">Nishant Vikramaditya</h5>
         <p class="card-text">Lead Developer</p>
-        <p class="card-text">Nishant Vikramaditya is a passionate programmer and developer. He is currently a freshman at Interlake High School. On his <a href="https://nv7haven.com" target="_blank">website</a>, he has a variety of games and projects showcasing his interest in programming.</p>
+        <p class="card-text">Nishant Vikramaditya is a freshman at Interlake High School. He is a passionate developer who enjoys backend development and database architecture. On his <a href="https://nv7haven.com" target="_blank">website</a>, he has a variety of games and projects showcasing his interest in programming. He is also the lead developer for Elemental on Discord, which handles over 500 commands per day. In his spare time, Nishant enjoys developing Discord bots and experimenting with various programming languages (fun fact: he knows 22).</p>
         <a href="https://nv7haven.com" class="btn btn-primary">Contact</a>
       </div>
     </div>
