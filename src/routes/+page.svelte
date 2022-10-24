@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-  <title>Water Calculator</title>
+  <title>Waterly</title>
 </svelte:head>
 
 <Estimate></Estimate>
