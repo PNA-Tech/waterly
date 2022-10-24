@@ -23,7 +23,7 @@
 
 <div class="estimate">
   <div>{display.toLocaleString()} gal/year</div>
-  <div>{currencyFormat.format(cost(display))}</div>
+  <div>{currencyFormat.format(cost(display))}/year</div>
 </div>
 
 <style>
