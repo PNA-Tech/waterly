@@ -181,5 +181,5 @@ export function calculate(): number {
 
 // TODO: Support per-state prices
 export function cost(gallons: number): number {
-  return 0.03 * gallons; // $0.03/gallon on average
+  return 0.003 * gallons; // $0.003/gallon on average
 }
