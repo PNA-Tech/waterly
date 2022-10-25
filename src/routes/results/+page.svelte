@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Water Calculator - Results</title>
+  <title>Waterly - Results</title>
 </svelte:head>
 
 <h1>Your Results</h1>
