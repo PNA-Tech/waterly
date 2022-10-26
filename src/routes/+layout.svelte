@@ -18,3 +18,9 @@
 </nav>
 
 <slot></slot>
+
+<style>
+  .nav-link {
+    pointer-events: auto;
+  }
+</style>

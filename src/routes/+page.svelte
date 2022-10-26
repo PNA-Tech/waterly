@@ -88,5 +88,14 @@
     left: 0;
     right: 0;
     overflow: scroll;
+    pointer-events: none;
+  }
+
+  .body {
+    pointer-events: none;
+  }
+
+  :global(body) {
+    overflow: hidden;
   }
 </style>
