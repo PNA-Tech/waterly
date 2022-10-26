@@ -4,7 +4,7 @@
   import Estimate from "$lib/components/Estimate.svelte";
   import Question from "$lib/components/Question.svelte";
   import { questions } from "$lib/questions";
-  import { tick } from "svelte";
+  import { onDestroy, onMount, tick } from "svelte";
   import { fly } from "svelte/transition";
   
   const duration = 500;
@@ -33,6 +33,14 @@
     tick().then(() => {animate = false;});
     question += offset;
   } 
+
+  onMount(() => {
+    document.body.style.overflow = "hidden";
+  })
+
+  onDestroy(() => {
+    document.body.style.overflow = "auto";
+  })
 </script>
 
 <svelte:head>
