@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
   import { values } from "$lib/asker";
   import Estimate from "$lib/components/Estimate.svelte";
@@ -35,11 +36,15 @@
   } 
 
   onMount(() => {
-    document.body.style.overflow = "hidden";
+    if (browser) {
+      document.body.style.overflow = "hidden";
+    }
   })
 
   onDestroy(() => {
-    document.body.style.overflow = "auto";
+    if (browser) {
+      document.body.style.overflow = "auto";
+    }
   })
 </script>
 

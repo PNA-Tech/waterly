@@ -13,6 +13,10 @@
         <li class="nav-item">
           <a class="nav-link" class:active={$page.routeId == "about"} href="/about">About Us</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" class:active={$page.routeId == "resources"} href="/resources">Resources</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
