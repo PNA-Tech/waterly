@@ -1,53 +1,49 @@
+<svelte:head>
+    <title>Waterly - Resources</title>
+</svelte:head>
 
 <h1>Resources</h1>
-<p><strong>Learn more about how water footprint, how where you live affects you and what you can do the help the Earth.</strong></p>
-<script>
-    function page1() {
-        window.open("https://www.epa.gov/watersense/understanding-your-water-bill")
-    };
-    function page2() {
-        window.open("https://www.epa.gov/watersense/how-we-use-water")
-    };
-    function page3() {
-        window.open("https://lookforwatersense.epa.gov/products/")
-    };
-    function page4() {
-        window.open("https://dripfina.com/water-bill-by-us-states/#:~:text=What%27s%20The%20Average%20Monthly%20Water%20Bill%20in%20the,7%20Colorado%20...%208%20Connecticut%20...%20More%20items")
-    };
-    function page5() {
-        window.open("https://www.usgs.gov/mission-areas/water-resources/science/domestic-water-use")
-    };
-    function page6() {
-        window.open("https://www.conservenorthtexas.org/regional-indicators/us-domestic-water-use-gallons-day-person")
-    };
-    
-</script>
-  
-  <main>
-    
-    <!-- Learn about water bill epa.gov -->
-    <h3>Water Bill</h3>
-    <p>Click here to understand you water bill more in-depth:
-    </p>
-    <button type="button" class="btn btn-primary"  on:click={page1}>Learn more</button>
+<p class="lead">Learn more about how water footprint, how where you live affects you, and what you can do the help the Earth.</p>
 
-    <!-- Learn about how we use water epa.gov -->
-    <h3>How we use water</h3>
-    <p>Click here to understand you on how you use water everyday in your life more in-depth:
-    </p>
-    <button type="button" class="btn btn-primary"  on:click={page2}>Learn more</button>
+<div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+<div class="col">
+    <div class="card">
+    <img src="https://www.epa.gov/sites/default/files/2017-02/ws-water-understandingbill.jpg" class="card-img-top" alt="Water Bill Cover"/>
+    <div class="card-body">
+        <h5 class="card-title">Water Bill</h5>
+        <p class="card-text">An in-depth explanation of your water bill.</p>
+        <a href="https://www.epa.gov/watersense/understanding-your-water-bill" target="_blank" class="btn btn-primary">Learn more</a>
+    </div>
+    </div>
+</div>
 
-    <!-- Learn about Watersense Products epa.gov -->
-    <h3>Find a Watersense Product</h3>
-    <p>Click here to find approved Watersense Products you can use:
-    </p>
-    <button type="button" class="btn btn-primary"  on:click={page3}>Find</button>
+<div class="col">
+    <div class="card">
+    <img src="https://www.epa.gov/sites/default/files/2017-02/ws-water-howeusewater.jpg" class="card-img-top" alt="Water Bill Cover"/>
+    <div class="card-body">
+        <h5 class="card-title">How we use Water</h5>
+        <p class="card-text">How you use water in your everyday life.</p>
+        <a href="https://www.epa.gov/watersense/how-we-use-water" target="_blank" class="btn btn-primary">Learn more</a>
+    </div>
+    </div>
+</div>
 
-    <!-- Learn about Water Bills -->
-    <h3>External Resources for Domestic Water Use and Water Bills</h3>
-    <p>Learn more about Domestic Water Use and Water Bills by State:
-    </p>
-    <button type="button" class="btn btn-primary"  on:click={page4}>Water Bills By State</button>
-    <button type="button" class="btn btn-primary"  on:click={page5}>Domestic Water Usage Survey</button>
-    <button type="button" class="btn btn-primary"  on:click={page6}>Domestic Water Usage Growth</button>
-  </main>
+<div class="col">
+    <div class="card">
+        <img src="https://eamenergy.com/wp-content/uploads/2013/07/header_water-1024x403.jpg" class="card-img-top" alt="Water Bill Cover"/>
+        <div class="card-body">
+        <h5 class="card-title">WaterSense Products</h5>
+        <p class="card-text">Find approved WaterSense products you can use.</p>
+        <a href="https://lookforwatersense.epa.gov/products/" target="_blank" class="btn btn-primary">Learn more</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<h3>External Resources</h3>
+<p class="lead">Some resources we used to make this website!</p>
+<ul class="list-group mb-3">
+    <a class="list-group-item" target="_blank" href="https://dripfina.com/water-bill-by-us-states/#:~:text=What%27s%20The%20Average%20Monthly%20Water%20Bill%20in%20the,7%20Colorado%20...%208%20Connecticut%20...%20More%20items">Water Bills by State</a>
+    <a class="list-group-item" target="_blank" href="https://www.usgs.gov/mission-areas/water-resources/science/domestic-water-use">Domestic Water Usage Survey</a>
+    <a class="list-group-item" target="_blank" href="https://www.conservenorthtexas.org/regional-indicators/us-domestic-water-use-gallons-day-person">Domestic Water Usage Growth</a>
+</ul>
