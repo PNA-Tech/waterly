@@ -35,7 +35,7 @@
         <a
           href="https://www.piyushacharya.com"
           target="_blank"
-          class="btn btn-primary">Contact</a
+          class="btn btn-primary">Website</a
         >
       </div>
     </div>
@@ -48,24 +48,25 @@
         <p class="card-text">Researcher</p>
         <p class="card-text">
           Piyush Acharya is a freshman at Interlake High School interested in
-          SWE and ML. He recently placed first at the U.S. Department of
-          Energy's <a
+          SWE. He recently placed first at the U.S. Department of Energy's <a
             href="https://www.energy.gov/articles/doe-announces-winners-32nd-annual-national-science-bowl#:~:text=include%3A%20Vishnu%20Mangipudi%2C-,Piyush%20Acharya,-%2C%20Aishwarya%20Agrawal%2C%20Aryan"
             target="_blank">National Science Bowl Finals</a
-          >. Piyush is highly passionate about exploring different ways in which
-          he can advance his skills in the branches of science while also tying
-          it with his passion for computer science. He founded and is the lead
-          developer of
+          >. He also founded
           <a
             href="https://github.com/Verisimilitude11/DNAnalyzer"
             target="_blank">DNAnalyzer</a
-          >, an open source project that analyzes DNA sequences where he manages
-          a team of over 30 developers.
+          >, an open source project that analyzes DNA sequences, where he manages
+          a team of over 30 contributors. In addition to his passion for science
+          and technology, he is deeply committed to giving back to his
+          community, and he is fulfilling this as Executive Director of
+          <a href="https://www.mightycrayon.org/" target="_blank"
+            >Mighty Crayon</a
+          >.
         </p>
         <a
           href="https://www.piyushacharya.com"
           target="_blank"
-          class="btn btn-primary">Contact</a
+          class="btn btn-primary">Website</a
         >
       </div>
     </div>
@@ -88,7 +89,7 @@
           enjoys developing Discord bots and experimenting with various
           programming languages.
         </p>
-        <a href="https://nv7haven.com" class="btn btn-primary">Contact</a>
+        <a href="https://nv7haven.com" class="btn btn-primary">Website</a>
       </div>
     </div>
   </div>
