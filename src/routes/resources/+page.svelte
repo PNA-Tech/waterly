@@ -9,7 +9,7 @@
         window.open("https://www.epa.gov/watersense/how-we-use-water")
     };
     function page3() {
-        window.open("https://www.epa.gov/watersense/understanding-your-water-bill")
+        window.open("https://lookforwatersense.epa.gov/products/")
     };
     function page4() {
         window.open("https://dripfina.com/water-bill-by-us-states/#:~:text=What%27s%20The%20Average%20Monthly%20Water%20Bill%20in%20the,7%20Colorado%20...%208%20Connecticut%20...%20More%20items")
