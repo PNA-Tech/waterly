@@ -3,22 +3,22 @@
 <p><strong>Learn more about how water footprint, how where you live affects you and what you can do the help the Earth.</strong></p>
 <script>
     function page1() {
-        location.replace("https://www.epa.gov/watersense/understanding-your-water-bill")
+        window.open("https://www.epa.gov/watersense/understanding-your-water-bill")
     };
     function page2() {
-    location.replace("https://www.epa.gov/watersense/how-we-use-water")
+        window.open("https://www.epa.gov/watersense/how-we-use-water")
     };
     function page3() {
-        location.replace("https://www.epa.gov/watersense/understanding-your-water-bill")
+        window.open("https://www.epa.gov/watersense/understanding-your-water-bill")
     };
     function page4() {
-        location.replace("https://dripfina.com/water-bill-by-us-states/#:~:text=What%27s%20The%20Average%20Monthly%20Water%20Bill%20in%20the,7%20Colorado%20...%208%20Connecticut%20...%20More%20items")
+        window.open("https://dripfina.com/water-bill-by-us-states/#:~:text=What%27s%20The%20Average%20Monthly%20Water%20Bill%20in%20the,7%20Colorado%20...%208%20Connecticut%20...%20More%20items")
     };
     function page5() {
-        location.replace("https://www.usgs.gov/mission-areas/water-resources/science/domestic-water-use")
+        window.open("https://www.usgs.gov/mission-areas/water-resources/science/domestic-water-use")
     };
     function page6() {
-        location.replace("https://www.conservenorthtexas.org/regional-indicators/us-domestic-water-use-gallons-day-person")
+        window.open("https://www.conservenorthtexas.org/regional-indicators/us-domestic-water-use-gallons-day-person")
     };
     
 </script>
