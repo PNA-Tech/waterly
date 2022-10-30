@@ -8,7 +8,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mb-5">
     <div class="col">
         <div class="card">
-        <img src="https://raw.githubusercontent.com/Interlake-Congressional-App-Challenge/Waterly/fc5aafac441cc6c6da37622fe9374cbbb3fc1105/static/resources/water-bill.jpg" class="card-img-top" alt="Water Bill Cover"/>
+        <img src="/resources/water-bill.jpg" class="card-img-top" alt="Water Bill Cover"/>
         <div class="card-body">
             <h5 class="card-title">Water Bill</h5>
             <p class="card-text">Understanding how much water you use now is the first step in changing the way you use water in the future. This information is best found on your monthly water bill. Take your water bill and follow the instructions below to learn more about it and your individual water consumption.</p>
