@@ -5,7 +5,7 @@
 <h1>Resources</h1>
 <p class="lead">Learn more about how water footprint, how where you live affects you, and what you can do the help the Earth.</p>
 
-<div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+<div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mb-5">
     <div class="col">
         <div class="card">
         <img src="https://www.epa.gov/sites/default/files/2017-02/ws-water-understandingbill.jpg" class="card-img-top" alt="Water Bill Cover"/>
