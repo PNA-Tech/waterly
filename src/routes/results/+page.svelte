@@ -1,5 +1,6 @@
 <script lang="ts">
   import { calculate, cost, tips } from "$lib/asker";
+    import { formatPostcssSourceMap } from "vite";
 
   const currencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -26,9 +27,9 @@
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Bill*</h5>
-      <h1>$100</h1>
-      <p class="card-text"><small class="text-muted">per month</small></p>
+      <h5 class="card-title">Bill</h5>
+      <h1>{(currencyFormat.format(cost(res * 365)))}</h1>
+      <p class="card-text"><small class="text-muted">per year</small></p>
     </div>
   </div>
 </div>
