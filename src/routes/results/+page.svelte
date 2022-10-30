@@ -1,6 +1,5 @@
 <script lang="ts">
   import { calculate, cost, tips } from "$lib/asker";
-    import { formatPostcssSourceMap } from "vite";
 
   const currencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',
