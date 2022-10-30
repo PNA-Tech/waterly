@@ -19,7 +19,7 @@
 
     <div class="col">
         <div class="card">
-        <img src="https://github.com/Interlake-Congressional-App-Challenge/Waterly/blob/94895db5e4c771bd2830f0ee95a35a1c611907f4/static/resources/how-we-use-water.jpg?raw=true" class="card-img-top" alt="Water Bill Cover"/>
+        <img src="/resources/how-we-use-water.jpg" class="card-img-top" alt="Water Bill Cover"/>
         <div class="card-body">
             <h5 class="card-title">How We Use Water</h5>
             <p class="card-text">Although the Earth appears to have an abundance of water, only around 1% of it is available for human use. The remainder is either saline water from seas, fresh water trapped in polar ice caps, or too inaccessible for practical use. Despite rising population and demand for freshwater resources, availability will always be steady. And, while the water cycle regularly returns water to Earth, it is not always restored in the same area, amount, or quality.</p>
