@@ -158,7 +158,7 @@ export const questions: Question<any>[] = [
     },
   },
   {
-    title: "How large is the are of your lawn you water?",
+    title: "How large is the area of your lawn?",
     type: QuestionType.MultipleChoice,
     data: {
       choices: {
@@ -187,7 +187,7 @@ export const questions: Question<any>[] = [
     },
   },
   {
-    title: "How long do you leave the pool uncovered?",
+    title: "How many months do you leave the pool uncovered?",
     type: QuestionType.MultipleChoice,
     data: {
       choices: {

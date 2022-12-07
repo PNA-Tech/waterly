@@ -18,6 +18,7 @@
 </script>
 
 <div class="container question">
+  <br><br>
   <h1 class="mb-3">{question.title}</h1>
   {#if question.type == QuestionType.MultipleChoice}
     <div class="btn-group-vertical btn-group-lg items">
